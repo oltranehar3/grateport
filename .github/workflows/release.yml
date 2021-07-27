@@ -4,11 +4,12 @@
 
 name: release scan
 
+# Controls when the workflow will run
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/6 * * * *'
 
 jobs:
   generate:
