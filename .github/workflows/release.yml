@@ -2,7 +2,7 @@
 # .github/workflows/generate_readme.yml
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: generate readme.md
+name: release scan
 
 on:
   push:
@@ -32,7 +32,7 @@ jobs:
         pip install requests 
 
     - name: Run
-      run: python generate.py
+      run: python gen.py
 
     - name: Release
       run: |
